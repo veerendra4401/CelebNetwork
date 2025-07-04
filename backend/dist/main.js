@@ -15,13 +15,17 @@ async function bootstrap() {
     app.enableCors();
     app.useGlobalPipes(new common_1.ValidationPipe());
     const config = new swagger_1.DocumentBuilder()
-        .setTitle('CelebNetwork API')
-        .setDescription('Celebrity discovery and fan engagement platform API')
+        .setTitle('Celebrity Fan Connect API')
+        .setDescription('API documentation for the Celebrity Fan Connect platform')
         .setVersion('1.0')
+        .addTag('auth', 'Authentication endpoints')
+        .addTag('celebrities', 'Celebrity management endpoints')
+        .addTag('fans', 'Fan interaction endpoints')
+        .addTag('pdf', 'PDF generation endpoints')
         .addBearerAuth()
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, config);
-    swagger_1.SwaggerModule.setup('api', app, document);
+    swagger_1.SwaggerModule.setup('api/docs', app, document);
     await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();

@@ -21,14 +21,18 @@ async function bootstrap() {
 
   // Configure Swagger documentation
   const config = new DocumentBuilder()
-    .setTitle('CelebNetwork API')
-    .setDescription('Celebrity discovery and fan engagement platform API')
+    .setTitle('Celebrity Fan Connect API')
+    .setDescription('API documentation for the Celebrity Fan Connect platform')
     .setVersion('1.0')
+    .addTag('auth', 'Authentication endpoints')
+    .addTag('celebrities', 'Celebrity management endpoints')
+    .addTag('fans', 'Fan interaction endpoints')
+    .addTag('pdf', 'PDF generation endpoints')
     .addBearerAuth()
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('api/docs', app, document);
 
   await app.listen(process.env.PORT ?? 3000);
 }

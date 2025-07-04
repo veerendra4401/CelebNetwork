@@ -10,4 +10,5 @@ export declare class CelebrityController {
     findOne(id: string): Promise<Celebrity | null>;
     update(id: string, updateCelebrityDto: Partial<Celebrity>): Promise<Celebrity | null>;
     remove(id: string): Promise<void>;
+    autoFillDetails(name: string): Promise<Partial<Celebrity> | null>;
 }
