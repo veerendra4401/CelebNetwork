@@ -24,9 +24,8 @@ A full-stack application that connects celebrities with their fans, featuring re
 ### Backend
 - **Framework**: NestJS
 - **Database**: PostgreSQL with TypeORM
-- **Authentication**: JWT, Passport
+- **Authentication**: JWT.
 - **API Documentation**: Swagger/OpenAPI
-- **Cloud**: AWS Lambda with Serverless Framework
 - **AI Integration**: Google's Gemini AI
 
 ### Frontend
@@ -40,7 +39,6 @@ A full-stack application that connects celebrities with their fans, featuring re
 - Node.js (v18 or higher)
 - PostgreSQL
 - Docker (optional, for containerization)
-- AWS CLI (for deployment)
 
 ## 🚀 Getting Started
 
